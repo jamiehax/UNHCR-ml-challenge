@@ -8,16 +8,7 @@ Our problem addresses the humanitarian crisis in Somalia related to refugee move
 We are curious about how certain environmental factors like drought or vegetation affect human movement. UNHCR’s extensive dataset allows us to answer this question due to its NDVI (normalized difference vegetation index) allows us to effectively investigate these questions. Ultimately, the model could help inform UN operations where people might be displaced and where people might move to. This information allows humanitarian efforts to effectively reach refugees by helping organizations plan their relief efforts based on the predicted change in the number of displaced people in a particular area.
 
 ## Planned Deliverables
-Concisely state what you are aiming to create and what capabilities it will have. For most projects, I would expect the deliverable to include:
-
-- A Python package containing all code used for algorithms and analysis, including documentation.
-- At least one Jupyter notebook illustrating the use of the package to analyze data.
-However, your specific idea might imply different deliverables (e.g. an essay). Consult with me if you’re not sure.
-
-You should describe what your deliverable will be able to do and how you will evaluate its effectiveness. **Please consider two scenarios:**
-
-- “Full success.” What will your deliverable be if everything works out for you exactly as you plan?
-- “Partial success.” What useful deliverable will you be able to offer even if things don’t 100% work out? For example, maybe you aren’t able to get that webapp together, but you can still create a code repository that showcases the machine learning pipeline needed to use to support the app. Have a contingency plan!
+We will develop a trained model, in the form of a Python package, that will predict forcibly displaced persons movement using GIS data. This package will contain the model class itself and all of the methods related to training the model and running inferences with the model. We will additionally create a Jupyter notebook to illustrate patterns in the data and demonstrate model predictions. If everything works out, we will deliver the trained model and a notebook demonstrating its accuracy and effectiveness. A partial success would be still delivering a trained model, but just one that is not as effective or accurate as we may have hoped. 
 
 ### Written Deliverables
 You’ll also write a blog post on your project; you don’t have to discuss this post in your proposal though.
