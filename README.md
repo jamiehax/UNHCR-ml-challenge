@@ -5,14 +5,7 @@ Code repository for the UNHCR's Artificial Intelligence for Operation Support to
 Our problem addresses the humanitarian crisis in Somalia related to refugee movements and forcibly displaced people. The ability to accurately predict patterns in forcibly displaced peoples movements is crucial to the development of public policies that provide aid and resources to refugees. We plan to focus on building a model trained on GIS data covering Somalia’s environment, economy, and stability provided by UNHCR. By looking at a variety of conditions affecting human movement, we seek to predict where people might move, either forcibly or voluntarily.bA successful model will be able to accurately predict where people are moving from due to a variety of factors like instability, drought, or economics. 
 
 ## Motivation and Question
-Describe your _motivation_ for your project idea. Some (shortened) examples of good types of motivations:
-
-- We have a scientific data set for which predictive or expoloratory models would help us generate hypotheses.
-- We have user information for which predictive models would help us give users better experiences.
-- We have performance data (e.g. from sports teams) for which predictive models could help us make better decisions.
-- Algorithmic bias is an increasingly urgent challenge as machine learning products proliferate, and we want to explore it more deeply.
-
-You should be more specific than these: describe your specific data set (if applicable); your scientific questions; the type of decisions your model could inform; etc.
+We are curious about how certain environmental factors like drought or vegetation affect human movement. UNHCR’s extensive dataset allows us to answer this question due to its NDVI (normalized difference vegetation index) allows us to effectively investigate these questions. Ultimately, the model could help inform UN operations where people might be displaced and where people might move to. This information allows humanitarian efforts to effectively reach refugees by helping organizations plan their relief efforts based on the predicted change in the number of displaced people in a particular area.
 
 ## Planned Deliverables
 Concisely state what you are aiming to create and what capabilities it will have. For most projects, I would expect the deliverable to include:
