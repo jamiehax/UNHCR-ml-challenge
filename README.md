@@ -2,11 +2,7 @@
 Code repository for the UNHCR's Artificial Intelligence for Operation Support to the Forcible Displaced Challenge.
 
 ## Abstract
-In 3-4 sentences, concisely describe:
-
-- What problem your project addresses.
-- The overall approach you will use to solve the problem.
-- How you propose to evaluate your success against your stated goals.
+Our problem addresses the humanitarian crisis in Somalia related to refugee movements and forcibly displaced people. The ability to accurately predict patterns in forcibly displaced peoples movements is crucial to the development of public policies that provide aid and resources to refugees. We plan to focus on building a model trained on GIS data covering Somalia’s environment, economy, and stability provided by UNHCR. By looking at a variety of conditions affecting human movement, we seek to predict where people might move, either forcibly or voluntarily.bA successful model will be able to accurately predict where people are moving from due to a variety of factors like instability, drought, or economics. 
 
 ## Motivation and Question
 Describe your _motivation_ for your project idea. Some (shortened) examples of good types of motivations:
