@@ -14,11 +14,7 @@ We will develop a trained model, in the form of a Python package, that will pred
 You’ll also write a blog post on your project; you don’t have to discuss this post in your proposal though.
 
 ## Resources Required
-What resources do you need in order to complete your project? Data? Computing power? An account with a specific service?
-
-Please pay special attention to the question of **data**. If your project idea involves data, include at **least one link** to a data set you can use. If you can’t find data for your original idea, that’s ok! Think of something related to your group’s interests for which you can find data.
-
-Most projects should involve data in some way, but certain projects may not require data. Ask me if you’re not sure.
+The most important resource we will need for this project is good data. We plan to use GIS datasets from the [UNHCR’s operation data portal](https://data.unhcr.org/en/geoservices/). There are many different datasets available that we may incorporate, but we will probably use the Population Reference Points and Populations Reference Areas datasets, among others. While we are not set on the model we will use, it is unlikely to be a deep-learning model, therefore access to compute resources will likely not be needed. If they are, however, I (Jamie) already have access to ada, so we can run some training on there if needed.
 
 ## What You Will Learn
 Mihir: I decided to focus on the implementation of machine learning algorithms as well as machine learning’s social impact. This project allows me to work on implementing machine learning algorithms designed to take in GIS data as well as also focus on developing a data pipeline that effectively cleans the data since much of what is collected cannot just be fit neatly into a machine learning model. Meanwhile, I also said I was interested in how machine learning can be used for a positive social impact. This project will allow me to consider how that may be true as well as consider important ethical questions related to the application of machine learning for humanitarian causes.
