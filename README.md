@@ -30,7 +30,7 @@ Please pay special attention to the question of **data**. If your project idea i
 Most projects should involve data in some way, but certain projects may not require data. Ask me if you’re not sure.
 
 ## What You Will Learn
-Each group member should return to their stated goals from the [reflective goal-setting assignment](https://middlebury-csci-0451.github.io/CSCI-0451-s24/assignments/process/goal-setting.html) at the beginning of the course. Then, in this section, please state what each group member intends to learn through working on the project, **relating your intentions to your stated goals**. You might be thinking of certain algorithms, software packages, version control, project management, effective teamwork, etc.
+Mihir: I decided to focus on the implementation of machine learning algorithms as well as machine learning’s social impact. This project allows me to work on implementing machine learning algorithms designed to take in GIS data as well as also focus on developing a data pipeline that effectively cleans the data since much of what is collected cannot just be fit neatly into a machine learning model. Meanwhile, I also said I was interested in how machine learning can be used for a positive social impact. This project will allow me to consider how that may be true as well as consider important ethical questions related to the application of machine learning for humanitarian causes.
 
 ## Risk Statement
 What are two things that could potentially stop you from achieving the full deliverable above? Maybe it turns out that the pattern you thought would be present in the data just doesn’t exist? Or maybe your idea requires more computational power than is available to you? What particular risks might be applicable for your project?
