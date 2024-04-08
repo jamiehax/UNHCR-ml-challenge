@@ -21,22 +21,13 @@ The most important resource we will need for this project is good data. We plan 
 
 **Jamie:** A lot of the goals I set for myself at the beginning of the semester were focused on improving my theoretical understanding of machine learning models, which this project does not focus much on. That said, I think I have developed that understanding a lot in other aspects of the course, and for this project I am interested in developing better practical skills related to model implementation. By doing so, I hope learn about the practical aspects of implementing a model on real world data, especially as it relates to cleaning data and evaluating the model.
 
+**Jake:** I set out to challenge myself to learn more of the theory of machine learning—the frameworks and math behind a lot of our models. I hope this project is a way for me to lean into that challenge as applied to an interesting topic. Given the scope of the topic as well, I want to think about the social responsibility of making these models. I think our topic in dealing with displaced peoples is extremely interesting, but it brings up interesting ethical questions about making models and drawing conclusions that can potentially be harmful or affirm biases.
+
 ## Risk Statement
-What are two things that could potentially stop you from achieving the full deliverable above? Maybe it turns out that the pattern you thought would be present in the data just doesn’t exist? Or maybe your idea requires more computational power than is available to you? What particular risks might be applicable for your project?
+While we have done some preliminary research into the datasets and are confident that we will be able to find useful and relevant features for predicting refugee movement, there is a risk that the data will not be predictively useful. Another issue is given that there is a lot of data and it may not be as useful as we first imagined, we might not achieve conclusive predictions by the end of the project.
 
 ## Ethics Statement
-All projects we undertake involve decisions about whose interests matter; which problems are important; and which tradeoffs are considered acceptable. Take some time to reflect on the potential impacts of your project on its prospective users and the broader world. Address the following questions:
+Our project has the potential to benefit refugees and forcibly displaced persons in Somalia by highlighting areas that need more resources. Unfortunately, resources are not infinite, and giving more resources to one area may mean less resources to another, potentially harming some people. Under the assumptions that our project is accurate, unbiased, and that better direction of resources will ease the humanitarian crisis in Somalia, our project would make the world a better place. Depending on the data we use to train the model, algorithmic bias could definitely be an issue we need to address. Specifically, our model might bias towards predicting the movements of refugees to common areas, discriminating against less common migration patterns.
 
-1. What groups of people have the potential to **benefit** from our project?
-2. What groups of people have the potential to be **excluded from benefit** or even **harmed** from our project?
-3. Will the world become an **overall better place** because we made our project? Describe at least 2 **assumptions** behind your answer. For example, if your project aims to make it easier to predict crime, your assumptions might include:
-  - Criminal activity is predictable based on other features of a person or location.
-  - The world is a better place when police are able to perform their roles more efficiently.
-
-If your project involves making decisions or recommendations, then you will also need to consider possible forms of algorithmic bias in your work. Here are some relevant examples:
-
-A recipe recommendation app can privilege the cuisines of some locales over others. Will your user search recipes by ingredients? Peanut butter and tomato might seem an odd combination in the context of European cuisine, but is common in many traditional dishes of the African diaspora. A similar set of questions applies to recommendation systems related to style or beauty.
-A sentiment analyzer must be trained on specific languages. What languages will be included? Will diverse dialects be included, or only the “standard” version of the target language? Who would be excluded by such a choice, and how will you communicate about your limitations?
-
-## Tentative Timeline
-We will have a checkpoint for the project in Week 9 or 10, and then final presentations in Week 12. With this in mind, please describe what you expect to achieve after **three** and **six**. Your goal by the three-week check-in should be to have “something that works.” For example, maybe in three weeks you’ll ready to demonstrate the data acquisition pipeline and show some exploratory analysis, and in the last couple weeks you’ll actually implement your machine learning models.
+## Tentative Timeline:
+At the end of week 9, we plan on having our data pipeline setup such that we can fill data into the model and do some basic analysis looking at how one feature (maybe flooding) affects human movement. Finally after working on the project for six weeks, we hope to have set up a model that can accurately predict displacement given a set of information about the land of a region. For example, given the vegetation index, flood risk, drought risk, HDI, and so on, how many people might leave some specific region or go to a specific region. 
