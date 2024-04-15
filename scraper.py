@@ -80,4 +80,13 @@ class Scraper():
 
                 # save dataframe if `to_csv` is True
                 if to_csv:
-                    df.to_csv(f'{file_path}.csv', in
+                    df.to_csv(f'{file_path}.csv', index=False)
+                
+                # add df to dfs
+                dfs[file_name] = df
+    
+            # unsuccessful request
+            else:
+                return f'Request failed on url: {url}. \n Status code: {response.status_code}'
+            
+        return dfs
