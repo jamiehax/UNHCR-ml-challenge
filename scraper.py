@@ -10,8 +10,8 @@ class Scraper():
     Web Scraper class for FAO FSNAU Early Warning/Early Action in Somalia dashboard.
     
     Scrape
-        - `self.scrape` method scrapes data from all URLs in `urls` argument list and 
-          saves data to CSV files in 'data/' directory with the type of data as the filename.
+        - `self.scrape` method scrapes data from all URLs in `urls` argument list.
+          
     """
 
 
@@ -19,15 +19,27 @@ class Scraper():
         return
 
 
-    def scrape(self, urls) -> Union[str, bool]:
+    def scrape(self, urls: list, to_csv=False) -> Union[str, dict]:
         """
-        Scrape data from all URLs in urls argument and save each as a CSV with the type of data as the filename.
+        Scrape data from all URLs in urls argument and return as a dict mapping filenames to DataFrames.
 
-        Returns:
-            - True if all requests were successful.
-            - If any URL request fails, exits and returns failed URL request response code.
+        ARGUMENTS:
+
+        `urls`:
+            A list of URLs stored as strings to scrape data from.
+
+        `to_csv`:
+            A flag indicating whether to save the DataFrames to CSV files.
+            
+            If `to_csv` is set to True, saves all scraped pages to separate CSV files in 'data/' directory. The filenames are the part of the URL after '.org'. For example, 'https://dashboard.fsnau.org/population/arrivals' will save to data/population-arrivals.csv.
+
+        
+        RETURNS:
+            A dict mapping filename to DataFrame for each URL scraped. If any URL fails, exits and returns the status code.
+        
         """
 
+        dfs = {}
         for url in urls:
 
             # get page contents
@@ -66,25 +78,6 @@ class Scraper():
                 file_name = file_name.replace('/', '-')
                 file_path = os.path.join(output_dir, file_name)
 
-                # save dataframe
-                df.to_csv(f'{file_path}.csv', index=False)
-
-
-            # unsuccessful request
-            else:
-                return f'Request failed on url: {url}. \n Status code: {response.status_code}'
-            
-        return True
-    
-
-if __name__ == '__main__':
-
-    # example test URLs
-    urls = [
-        'https://dashboard.fsnau.org/population/arrivals',
-        'https://dashboard.fsnau.org/population/departures'
-    ]
-
-    scraper = Scraper()
-    result = scraper.scrape(urls)
-    print(result)
+                # save dataframe if `to_csv` is True
+                if to_csv:
+                    df.to_csv(f'{file_path}.csv', in
