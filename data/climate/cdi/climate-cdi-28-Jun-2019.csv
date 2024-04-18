@@ -1,0 +1,76 @@
+#,Region,District,Jan-2019,Feb-2019,Mar-2019,Apr-2019,May-2019,Jun-2019
+,,,,,,,,
+1,Awdal,Borama,1.58,1.85,1.96,1.44,2.21,2.4
+2,Awdal,Baki,0.88,1.04,1.03,0.64,1.12,1.51
+3,Awdal,Lughaye,1.01,1.16,1.16,0.6,1.11,1.58
+4,Awdal,Zeylac,0.99,1.1,1.01,0.69,1.34,1.9
+5,Woqooyi Galbeed,Hargeysa,0.87,0.77,0.63,0.47,0.82,1.14
+6,Woqooyi Galbeed,Berbera,1.03,1.15,1.27,0.69,0.91,1.19
+7,Woqooyi Galbeed,Gebiley,0.89,0.99,1.21,0.99,1.52,1.71
+8,Togdheer,Burco,0.91,0.89,0.61,0.36,0.95,1.41
+9,Togdheer,Buuhoodle,0.76,0.8,0.6,0.28,0.89,1.21
+10,Togdheer,Owdweyne,0.92,0.78,0.59,0.43,0.93,1.33
+11,Togdheer,Sheikh,1.3,1.02,0.92,0.56,0.8,1.16
+12,Sool,Laas Caanood,0.61,0.69,0.53,0.29,0.79,1.13
+13,Sool,Caynabo,0.88,0.9,0.59,0.44,1.01,1.35
+14,Sool,Taleex,0.86,1.06,0.67,0.35,0.57,0.79
+15,Sool,Xudun,0.54,0.55,0.39,0.39,0.96,1.27
+16,Sanaag,Ceerigaabo,0.93,1.27,0.63,0.34,0.78,1.13
+17,Sanaag,Ceel Afweyn,0.88,0.97,0.66,0.38,0.81,1.18
+18,Sanaag,Laasqoray,0.9,1.25,0.95,0.36,0.67,0.96
+19,Bari,Bossaso,1.26,1.48,1.27,0.69,0.68,0.83
+20,Bari,Bandarbeyla,1.23,1.59,1.31,0.39,0.65,0.95
+21,Bari,Caluula,0.88,1.07,0.87,0.56,0.58,0.87
+22,Bari,Iskushuban,0.7,0.88,0.71,0.37,0.44,0.85
+23,Bari,Qandala,1.19,1.38,1.11,0.57,0.56,0.86
+24,Bari,Qardho,1.05,1.34,1.04,0.27,0.65,0.96
+25,Nugaal,Garoowe,0.9,1.16,0.98,0.33,0.86,1.12
+26,Nugaal,Burtinle,0.68,0.67,0.58,0.26,0.97,1.27
+27,Nugaal,Eyl,0.98,1.25,1.05,0.34,1.09,1.45
+28,Mudug,Gaalkacyo,0.7,0.7,0.55,0.31,1,1.33
+29,Mudug,Galdogob,1.04,0.99,0.63,0.42,1.08,1.38
+30,Mudug,Hobyo,0.63,0.58,0.54,0.44,0.86,1.18
+31,Mudug,Jariiban,0.68,0.65,0.63,0.34,0.89,1.19
+32,Mudug,Xarardheere,0.9,0.88,1.1,1,1.68,1.77
+33,Galgaduud,Dhuusamarreeb,0.48,0.53,0.79,0.49,1.08,1.15
+34,Galgaduud,Cabudwaaq,0.51,0.57,0.82,0.6,1.3,1.38
+35,Galgaduud,Cadaado,0.62,0.62,0.57,0.39,0.93,1.18
+36,Galgaduud,Ceel Buur,0.69,0.76,0.65,0.4,0.99,1.16
+37,Galgaduud,Ceel Dheer,0.95,0.98,1.08,0.88,1.26,1.31
+38,Hiraan,Belet Weyne,0.64,0.63,0.54,0.39,0.97,1.18
+39,Hiraan,Bulo Burto,0.92,0.86,0.58,0.46,1.02,1.27
+40,Hiraan,Jalalaqsi,0.87,0.84,0.55,0.44,0.9,1.11
+41,Middle Shabelle,Jowhar,0.85,0.79,0.77,0.75,1.04,1.01
+42,Middle Shabelle,Adan Yabaal,0.96,0.89,0.99,0.96,1.23,1.3
+43,Middle Shabelle,Balcad,0.92,0.92,1.14,0.9,1.22,1.17
+44,Middle Shabelle,Cadale,0.78,0.8,0.98,0.85,1.16,1.19
+45,Banadir,Mogadishu,,,,,,
+46,Lower Shabelle,Marka,0.52,0.53,0.77,0.67,0.63,0.44
+47,Lower Shabelle,Afgooye,0.85,0.84,1,0.81,1.05,1.02
+48,Lower Shabelle,Baraawe,0.29,0.33,0.59,0.49,1.1,1.04
+49,Lower Shabelle,Kurtunwaarey,0.52,0.62,0.78,0.78,1.21,1.08
+50,Lower Shabelle,Qoryooley,0.6,0.59,0.72,0.77,1.11,0.97
+51,Lower Shabelle,Sablaale,0.53,0.52,0.66,0.84,1.36,1.24
+52,Lower Shabelle,Wanla Weyn,0.94,0.86,0.82,0.67,1,1
+53,Bay,Baydhaba,0.97,0.85,0.55,0.48,1.04,1.22
+54,Bay,Buur Hakaba,0.84,0.75,0.68,0.74,1.17,1.16
+55,Bay,Diinsoor,1.09,1,0.94,1.03,1.37,1.21
+56,Bay,Qansax Dheere,0.96,0.91,0.68,0.6,1.13,1.15
+57,Bakool,Xudur,0.87,0.88,0.62,0.45,1.15,1.38
+58,Bakool,Ceel Barde,0.72,0.75,0.55,0.4,1.1,1.31
+59,Bakool,Tayeeglow,0.97,0.92,0.6,0.44,0.99,1.22
+60,Bakool,Waajid,0.67,0.73,0.61,0.52,1.22,1.51
+61,Bakool,Rab Dhuure,0.64,0.71,0.55,0.73,1.53,1.8
+62,Gedo,Garbahaarey,0.99,0.9,0.87,0.98,1.56,1.43
+63,Gedo,Baardheere,0.85,0.89,0.96,1.06,1.4,1.3
+64,Gedo,Belet Xaawo,1.24,1.15,1.27,1.38,1.8,1.69
+65,Gedo,Ceel Waaq,0.96,0.85,0.96,1.15,1.54,1.41
+66,Gedo,Doolow,1.05,0.96,0.66,1.02,1.61,1.7
+67,Gedo,Luuq,0.98,0.88,0.59,0.82,1.58,1.8
+68,Middle Juba,Bu'aale,0.79,0.72,0.74,0.96,1.53,1.43
+69,Middle Juba,Jilib,0.61,0.6,0.66,0.68,1.55,1.5
+70,Middle Juba,Saakow,0.87,0.93,0.98,1.07,1.45,1.36
+71,Lower Juba,Kismaayo,0.61,0.59,0.45,0.48,0.76,0.83
+72,Lower Juba,Afmadow,0.68,0.8,0.82,0.76,1.19,1.4
+73,Lower Juba,Badhaadhe,0.73,0.84,0.78,0.71,0.83,0.96
+74,Lower Juba,Jamaame,0.3,0.33,0.32,0.27,0.71,0.87
