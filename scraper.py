@@ -5,7 +5,7 @@ from typing import Union
 import pandas as pd
 
 
-class Scraper():
+class FSNAUScraper():
     """
     Web Scraper class for FAO FSNAU Early Warning/Early Action in Somalia dashboard.
 
@@ -92,7 +92,7 @@ class Scraper():
         
 
 
-    def scrape_climate(self, to_csv=True, return_dfs=True):
+    def scrape_climate(self, to_csv=True, return_dfs=False):
         """
         Scrape data from all Climate related pages for all available years. Optionally save to a CSV file and return the DataFrame.
 
@@ -226,14 +226,6 @@ class Scraper():
 
         print(f"Scraped Water Price data with {len(wp_errors)} errors.")
 
-        dfs = {
-            'cdi': cdi_dfs,
-            'ndvi': ndvi_dfs,
-            'flood': flood_dfs,
-            'rainfall': rainfall_dfs,
-            'wp': wp_dfs
-        }
-
         errors = {
             'cdi': cdi_errors,
             'ndvi': ndvi_errors,
@@ -243,6 +235,23 @@ class Scraper():
         }
         
         if return_dfs:
+            dfs = {
+                'cdi': cdi_dfs,
+                'ndvi': ndvi_dfs,
+                'flood': flood_dfs,
+                'rainfall': rainfall_dfs,
+                'wp': wp_dfs
+            }
+            
             return dfs, errors
         else:
             return errors
+        
+
+    
+    def scrape_market(self, to_csv=True, return_dfs=False):
+        pass
+
+
+    def scrape_conflicts(self, to_csv=True, return_dfs=False):
+        pass
