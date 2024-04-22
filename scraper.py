@@ -212,7 +212,200 @@ class FSNAUScraper():
         # base climate data URL
         market_url = f'{self.base_url}/markets'
 
-        # TODO: write scraping code
+        # scrape maize price data
+        maize_dfs = []
+        maize_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/maize/28-Jun-{year}'
+            try:
+                maize_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/maize'))
+            except Exception as e:
+                maize_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/maize/28-Dec-{year}'
+            try:
+                maize_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/maize'))
+            except Exception as e:
+                maize_errors.append(e)
+
+        print(f"Scraped maize price data with {len(maize_errors)} errors.")
+
+        # scrape sorghum price data
+        sorghum_dfs = []
+        sorgum_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/sorghum/28-Jun-{year}'
+            try:
+                sorghum_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/sorghum'))
+            except Exception as e:
+                sorgum_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/sorghum/28-Dec-{year}'
+            try:
+                sorghum_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/sorghum'))
+            except Exception as e:
+                sorgum_errors.append(e)
+
+        print(f"Scraped sorghum price data with {len(sorgum_errors)} errors.")
+
+        # scrape rice price data
+        rice_dfs = []
+        rice_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/rice/28-Jun-{year}'
+            try:
+                rice_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/rice'))
+            except Exception as e:
+                rice_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/rice/28-Dec-{year}'
+            try:
+                rice_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/rice'))
+            except Exception as e:
+                rice_errors.append(e)
+
+        print(f"Scraped rice price data with {len(rice_errors)} errors.")
+
+        # scrape goat price data
+        goat_dfs = []
+        goat_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/goat/28-Jun-{year}'
+            try:
+                goat_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/goat'))
+            except Exception as e:
+                goat_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/goat/28-Dec-{year}'
+            try:
+                goat_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/goat'))
+            except Exception as e:
+                goat_errors.append(e)
+
+        print(f"Scraped goat price data with {len(goat_errors)} errors.")
+
+        # scrape wage price data
+        wage_dfs = []
+        wage_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/wage/28-Jun-{year}'
+            try:
+                wage_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/wage'))
+            except Exception as e:
+                wage_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/wage/28-Dec-{year}'
+            try:
+                wage_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/wage'))
+            except Exception as e:
+                wage_errors.append(e)
+
+        print(f"Scraped wage price data with {len(wage_errors)} errors.")
+
+        # scrape wage to cereal price data
+        wtc_dfs = []
+        wtc_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/tot_wage/28-Jun-{year}'
+            try:
+                wtc_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/wage-to-cereal'))
+            except Exception as e:
+                wtc_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/tot_wage/28-Dec-{year}'
+            try:
+                wtc_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/wage-to-cereal'))
+            except Exception as e:
+                wtc_errors.append(e)
+
+        print(f"Scraped wage to cereal data with {len(wtc_errors)} errors.")
+
+        # scrape goat to cereal price data
+        gtc_dfs = []
+        gtc_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/tot_goat/28-Jun-{year}'
+            try:
+                gtc_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/goat-to-cereal'))
+            except Exception as e:
+                gtc_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/tot_goat/28-Dec-{year}'
+            try:
+                gtc_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/goat-to-cereal'))
+            except Exception as e:
+                gtc_errors.append(e)
+
+        print(f"Scraped goat to cereal data with {len(gtc_errors)} errors.")
+
+        # scrape cost of minimum basket price data
+        cmb_dfs = []
+        cmb_errors = []
+        for year in range(self.start_year, self.end_year, 1):
+
+            # try to scrape first half of year
+            first_half = f'{market_url}/cmb/28-Jun-{year}'
+            try:
+                cmb_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='markets/cost-min-basket'))
+            except Exception as e:
+                cmb_errors.append(e)
+            
+            # try to scrape second half of year
+            second_half = f'{market_url}/cmb/28-Dec-{year}'
+            try:
+                cmb_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='markets/cost-min-basket'))
+            except Exception as e:
+                cmb_errors.append(e)
+
+        print(f"Scraped cost of minimum basketn price data with {len(cmb_errors)} errors.")
+
+
+        errors = {
+            'maize': maize_errors,
+            'sorghum': sorgum_errors,
+            'rice': rice_errors,
+            'goat': goat_errors,
+            'wage': wage_errors,
+            'wtc': wtc_errors,
+            'gtc': gtc_errors,
+            'cmb': cmb_errors,
+        }
+        
+        if return_dfs:
+            dfs = {
+                'maize': maize_dfs,
+                'sorghum': sorghum_dfs,
+                'rice': rice_dfs,
+                'goat': goat_dfs,
+                'wage': wage_dfs,
+                'wtc': wtc_dfs,
+                'gtc': gtc_dfs,
+                'cmb': cmb_dfs,
+            }
+            return dfs, errors
+        else:
+            return errors
 
 
     def scrape_climate(self, to_csv=True, return_dfs=False):
@@ -639,3 +832,4 @@ class FSNAUScraper():
             return dfs, errors
         else:
             return errors
+
