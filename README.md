@@ -1,6 +1,9 @@
 # UNHCR-ml-challenge
 Code repository for the UNHCR's Artificial Intelligence for Operation Support to the Forcible Displaced Challenge.
 
+## Notes on Data
+Population movement data is only available starting in 2015, so all other data scraped starts then too. Nutrition data is not avilable until 2016, so 2015 CSVs are empty. Flood Data stops at 2021, so no data scraped for after that.
+
 ## Abstract
 Our problem addresses the humanitarian crisis in Somalia related to refugee movements and forcibly displaced people. The ability to accurately predict patterns in forcibly displaced peoples movements is crucial to the development of public policies that provide aid and resources to refugees. We plan to focus on building a model trained on GIS data covering Somalia’s environment, economy, and stability provided by UNHCR. By looking at a variety of conditions affecting human movement, we seek to predict where people might move, either forcibly or voluntarily.bA successful model will be able to accurately predict where people are moving from due to a variety of factors like instability, drought, or economics. 
 
