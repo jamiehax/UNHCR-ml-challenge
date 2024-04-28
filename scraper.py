@@ -39,7 +39,7 @@ class FSNAUScraper():
         self.end_year = end_year
 
 
-    def scrape(self, url: str, to_csv=False, output_dir=None) -> Union[str, dict]:
+    def scrape(self, url: str, to_csv=True, output_dir=None) -> Union[str, dict]:
         """
         Scrape data from the passed URL and return it as a DataFrame. Optionally save to a CSV file.
 
