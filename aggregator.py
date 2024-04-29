@@ -26,9 +26,9 @@ class Aggregator:
         df = pd.merge(df, health_df, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
         print('merged health data')
 
-        malnutrition_df = self.aggregate_malnutrition()
-        df = pd.merge(df, malnutrition_df, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
-        print('merged malnutrition data')
+        # malnutrition_df = self.aggregate_malnutrition()
+        # df = pd.merge(df, malnutrition_df, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
+        # print('merged malnutrition data')
 
         market_df = self.aggregate_markets()
         df = pd.merge(df, market_df, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
@@ -88,19 +88,6 @@ class Aggregator:
 
         combined_cdi = pd.concat(cdi_dfs, ignore_index=True)
 
-        # aggregate flood data
-        flood_path = 'data/climate/flood'
-        flood_dfs = []
-        for file_name in os.listdir(flood_path):
-            file_path = os.path.join(flood_path, file_name)
-            df = self.load_dataframe(file_path, 'River Level')
-            flood_dfs.append(df)
-
-        combined_flood = pd.concat(flood_dfs, ignore_index=True)
-
-        # merge dataframes
-        climate_df = pd.merge(combined_cdi, combined_flood, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
-
         # aggregate ndvi data
         ndvi_path = 'data/climate/ndvi'
         ndvi_dfs = []
@@ -112,7 +99,7 @@ class Aggregator:
         combined_ndvi = pd.concat(ndvi_dfs, ignore_index=True)
 
         # merge dataframes
-        climate_df = pd.merge(climate_df, combined_ndvi, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
+        climate_df = pd.merge(combined_cdi, combined_ndvi, on=['Region', 'District', 'Year', 'Month'], how=self.join_method)
 
         # aggregate rainfall data
         rainfall_path = 'data/climate/rainfall'

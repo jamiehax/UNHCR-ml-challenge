@@ -477,28 +477,6 @@ class FSNAUScraper():
         print(f"Scraped NDVI (vegetation) data with {len(ndvi_errors)} errors.")
 
 
-        # scrape flood data
-        flood_dfs = []
-        flood_errors = []
-        for year in range(self.start_year, 2021, 1): # flood data stops at 2021
-
-            # try to scrape first half of year
-            first_half = f'{climate_url}/river-levels/28-Jun-{year}'
-            try:
-               flood_dfs.append(self.scrape(first_half, to_csv=to_csv, output_dir='climate/flood'))
-            except Exception as e:
-                flood_errors.append(e)
-            
-            # try to scrape second half of year
-            second_half = f'{climate_url}/river-levels/28-Dec-{year}'
-            try:
-                flood_dfs.append(self.scrape(second_half, to_csv=to_csv, output_dir='climate/flood'))
-            except Exception as e:
-                flood_errors.append(e)
-
-        print(f"Scraped Flood data with {len(flood_errors)} errors.")
-
-
         # scrape rainfall data
         rainfall_dfs = []
         rainfall_errors = []
@@ -545,7 +523,6 @@ class FSNAUScraper():
         errors = {
             'cdi': cdi_errors,
             'ndvi': ndvi_errors,
-            'flood': flood_errors,
             'rainfall': rainfall_errors,
             'wp': wp_errors
         }
@@ -554,7 +531,6 @@ class FSNAUScraper():
             dfs = {
                 'cdi': cdi_dfs,
                 'ndvi': ndvi_dfs,
-                'flood': flood_dfs,
                 'rainfall': rainfall_dfs,
                 'wp': wp_dfs
             }
