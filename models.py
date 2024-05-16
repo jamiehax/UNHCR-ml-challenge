@@ -36,6 +36,7 @@ def dropNA(df, top_9=False):
     if top_9:
         keep_cols = ['Arrivals', 'Region', 'District', 'Month', 'Year', 'Rainfall', 'Conflict Fatalities', 'Conflict Incidents', 'Water Price', 'Goat Price']
         df = df[keep_cols]
+        df = df.dropna()
     else:
         columns = ['Region', 'District','CDI','Month','Year','NDVI','Rainfall','Water Price',
             'Conflict Fatalities','Conflict Incidents','Cholera Deaths',
@@ -43,8 +44,7 @@ def dropNA(df, top_9=False):
             'Goat Price','Goat to Cereal','Maize Price','Rice Price',
             'Sorghum Price','Wage Price','Wage to Cereal', 'Arrivals']
         df = df[columns]
-    
-    df = df.dropna()
+        df = df.dropna()
     
     # encode data that is not numerical
     encoder = LabelEncoder()
@@ -127,13 +127,11 @@ def evaluate_LR(X_train, y_train, X_test, y_test):
     print(f'rmse: {rmse}')
     print(f'classification accuracy: {accuracy}')
     print("\n")
-    
-    return [score, rmse, accuracy]
 
 
 def evaluate_RF(X_train, y_train, X_test, y_test):
     RF = RandomForestRegressor()
-    RF.fit(X_train, y_train)
+    RF.fit(X_train, y_train.ravel())
 
     # evaluate model based on bins
     true_bins = pd.cut(y_test['Arrivals'], bins=[0, 1000, 5000, float('inf')], labels=[1, 2, 3], right=False)
@@ -147,8 +145,6 @@ def evaluate_RF(X_train, y_train, X_test, y_test):
     print(f'rmse: {rmse}')
     print(f'classification accuracy: {accuracy}')
     print("\n")
-    
-    return [score, rmse, accuracy]
 
 
 def evaluate_DT(X_train, y_train, X_test, y_test):
@@ -167,5 +163,3 @@ def evaluate_DT(X_train, y_train, X_test, y_test):
     print(f'rmse: {rmse}')
     print(f'classification accuracy: {accuracy}')
     print("\n")
-     
-    return [score, rmse, accuracy]
