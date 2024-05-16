@@ -196,7 +196,7 @@ After testing each model on each dataset, we found the following models scored t
 </tbody>
 </table>
 
-Given that df_impute contains negative values, which are impossible in the real scenario, and df_dropna has only 275 (chec!!!) rows, making the possibility of overfitting high, we believe that neither of these models would give helpful predictions. Instead, we think that a Decision Tree trained on df_dropna_t9 would be the most useful in a real world scenario, as it would not predict negative values, is sufficiently large that overfitting is less of a worry, and still scores high. This model's scores are given below:
+Given that df_impute contains negative values, which are impossible in the real scenario, and df_dropna has only 230 training rows, making the possibility of overfitting high, we believe that neither of these models would give helpful predictions. Instead, we think that a Decision Tree trained on df_dropna_t9 would be the most useful in a real world scenario, as it would not predict negative values, is sufficiently large that overfitting is less of a worry, and still scores high. This model's scores are given below:
 
 <table>
 <thead>
