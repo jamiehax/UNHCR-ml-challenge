@@ -27,19 +27,19 @@ We trained a Linear Regression model, Decision Tree Regressor, and Random Forest
 
 The four datasets that result from this process, as well as their sizes are below:
 
-- df_dropna includes all rows without a single Na or NaN in any feature.
+- `df_dropna` includes all rows without a single Na or NaN in any feature.
   - train size: 230 x 23
   - test size: 55 x 23
 
-- df_dropna_t9 includes all rows without a single Na or NaN in any of the top nine features. 
+- `df_dropna_t9` includes all rows without a single Na or NaN in any of the top nine features. 
   - train size: 51,812 x 10
   - test size: 12,953 x 10
 
-- df_impute includes all rows and features and fills in missing values by estimating their value using SciKitLearn’s SimpleImputer. 
+- `df_impute` includes all rows and features and fills in missing values by estimating their value using SciKitLearn’s SimpleImputer. 
   - train size: 263084 x 23
   - test size: 65,772 x 23
 
-- df_impute_t9  includes all rows and only the best nine features, and fills in missing values by estimating their value using SciKitLearn’s SimpleImputer. 
+- `df_impute_t9`  includes all rows and only the best nine features, and fills in missing values by estimating their value using SciKitLearn’s SimpleImputer. 
   - train size: 263084 x 10
   - test size: 65,772 x 10
 
@@ -56,7 +56,7 @@ We evaluate the models using three different metrics, R2, RMSE, and the alarm le
 <thead>
 <tr>
 <th align="center"></th>
-<th align="center">df_dropna</th>
+<th align="center">`df_dropna`</th>
 <th align="center">df_dropna_t9</th>
 <th align="center">df_impute</th>
 <th align="center">df_impute_t9</th>
