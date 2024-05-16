@@ -56,7 +56,7 @@ We evaluate the models using three different metrics, R2, RMSE, and the alarm le
 <thead>
 <tr>
 <th align="center"></th>
-<th align="center">`df_dropna`</th>
+<th align="center">df_dropna</th>
 <th align="center">df_dropna_t9</th>
 <th align="center">df_impute</th>
 <th align="center">df_impute_t9</th>
