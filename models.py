@@ -9,7 +9,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
-from sklearn.experimental import enable_iterative_imputer  # noqa
+from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.metrics import r2_score
 from sklearn.tree import DecisionTreeRegressor
@@ -129,24 +129,6 @@ def evaluate_LR(X_train, y_train, X_test, y_test):
     print("\n")
 
 
-def evaluate_RF(X_train, y_train, X_test, y_test):
-    RF = RandomForestRegressor()
-    RF.fit(X_train, y_train.ravel())
-
-    # evaluate model based on bins
-    true_bins = pd.cut(y_test['Arrivals'], bins=[0, 1000, 5000, float('inf')], labels=[1, 2, 3], right=False)
-    preds_bin = np.digitize(RF.predict(X_test), bins=[0, 1000, 5000, float('inf')], right=False).flatten()
-    
-    score = RF.score(X_test, y_test)
-    rmse = math.sqrt(mean_squared_error(RF.predict(X_test), y_test))
-    accuracy = classification_accuracy(true_bins, preds_bin)
-    
-    print(f'score: {score}')
-    print(f'rmse: {rmse}')
-    print(f'classification accuracy: {accuracy}')
-    print("\n")
-
-
 def evaluate_DT(X_train, y_train, X_test, y_test):
     DT = DecisionTreeRegressor()
     DT.fit(X_train, y_train)
@@ -157,6 +139,24 @@ def evaluate_DT(X_train, y_train, X_test, y_test):
 
     score = DT.score(X_test, y_test)
     rmse = math.sqrt(mean_squared_error(DT.predict(X_test), y_test))
+    accuracy = classification_accuracy(true_bins, preds_bin)
+    
+    print(f'score: {score}')
+    print(f'rmse: {rmse}')
+    print(f'classification accuracy: {accuracy}')
+    print("\n")
+
+
+def evaluate_RF(X_train, y_train, X_test, y_test):
+    RF = RandomForestRegressor()
+    RF.fit(X_train, y_train)
+
+    # evaluate model based on bins
+    true_bins = pd.cut(y_test['Arrivals'], bins=[0, 1000, 5000, float('inf')], labels=[1, 2, 3], right=False)
+    preds_bin = np.digitize(RF.predict(X_test), bins=[0, 1000, 5000, float('inf')], right=False).flatten()
+    
+    score = RF.score(X_test, y_test)
+    rmse = math.sqrt(mean_squared_error(RF.predict(X_test), y_test))
     accuracy = classification_accuracy(true_bins, preds_bin)
     
     print(f'score: {score}')
