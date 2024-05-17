@@ -173,6 +173,35 @@ After testing each model on each dataset, we found the following models scored t
 <thead>
 <tr>
 <th align="center">Metric</th>
+<th align="center">Model</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">R<sup>2</sup></td>
+<td align="left">Random Forest on `df_impute`</td>
+<td align="left">0.965</td>
+</tr>
+<tr>
+<td align="left">RMSE</td>
+<td align="left">Random Forest on `df_impute`</td>
+<td align="left">784.980</td>
+</tr>
+<tr>
+<td align="left">Classification</td>
+<td align="left">Decision Tree on `df_dropna`</td>
+<td align="left">1.0</td>
+</tr>
+</tbody>
+</table>
+
+Given that df_impute contains negative values, which are impossible in the real scenario, and df_dropna has only 230 training rows, making the possibility of overfitting high, we believe that neither of these models would give helpful predictions. Instead, we think that a Decision Tree trained on df_dropna_t9 would be the most useful in a real world scenario, as it would not predict negative values, is sufficiently large that overfitting is less of a worry, and still scores high. This model's scores are given below:
+
+<table>
+<thead>
+<tr>
+<th align="center">Metric</th>
 <th align="center">Best Model</th>
 <th align="center">Value</th>
 </tr>
@@ -196,34 +225,7 @@ After testing each model on each dataset, we found the following models scored t
 </tbody>
 </table>
 
-Given that df_impute contains negative values, which are impossible in the real scenario, and df_dropna has only 230 training rows, making the possibility of overfitting high, we believe that neither of these models would give helpful predictions. Instead, we think that a Decision Tree trained on df_dropna_t9 would be the most useful in a real world scenario, as it would not predict negative values, is sufficiently large that overfitting is less of a worry, and still scores high. This model's scores are given below:
 
-<table>
-<thead>
-<tr>
-<th align="center">Metric</th>
-<th align="center">Best Model</th>
-<th align="center">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">R<sup>2</sup></td>
-<td align="left">Decision Tree on `df_dropna_t9`</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">RMSE</td>
-<td align="left">Decision Tree on `df_dropna_t9`</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">Classification</td>
-<td align="left">Decision Tree on `df_dropna_t9`</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
 
 
 Our best model performs exceptionally well on the vast majority of predictions, perfectly predicting the exact number of arrivals 98% of the time. That said, it performs very poorly when trying to predict these large outliers, which is reflected in the high RMSE. If these observations are anomalies in the dataset that we would not reasonably expect to correctly predict given the data available, in other words, caused by some external factor not present in the data (such as a government ordering the evacuation of an area), then this error is not a huge issue. If, on the other hand, these observations are largely explained by the data we have available, then we would want to do better at predicting them. One way we could do this is to try to incentivize our model to be less conservative and make larger predictions. Without knowing more about these specific observations, it is hard to say which is the best course of action.
