@@ -65,24 +65,24 @@ We evaluate the models using three different metrics, R<sup>2</sup>, RMSE, and t
 <tbody>
 <tr>
 <td align="left">R<sup>2</sup></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">0.0</td>
+<td align="left">0.020</td>
+<td align="left">0.333</td>
+<td align="left">0.100</td>
 </tr>
 <tr>
 <td align="left">RMSE</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">1.099 x 10<sup>-7</sup></td>
+<td align="left">6309.552</td>
+<td align="left">3423.200</td>
+<td align="left">3899.569</td>
 </tr>
 <tr>
 <td align="left">Classification</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">1.0</td>
+<td align="left">0.476</td>
+<td align="left">0.678</td>
+<td align="left">0.680</td>
 </tr>
 </tbody>
 </table>
@@ -102,24 +102,24 @@ We evaluate the models using three different metrics, R<sup>2</sup>, RMSE, and t
 <tbody>
 <tr>
 <td align="left">R<sup>2</sup></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">0.0999</td>
+<td align="left">0.946</td>
+<td align="left">0.937</td>
+<td align="left">0.824</td>
 </tr>
 <tr>
 <td align="left">RMSE</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">9024.153</td>
+<td align="left">1360.971</td>
+<td align="left">1090.005</td>
+<td align="left">1780.976</td>
 </tr>
 <tr>
 <td align="left">Classification</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">0.927</td>
+<td align="left">0.994</td>
+<td align="left">0.863</td>
+<td align="left">0.865</td>
 </tr>
 </tbody>
 </table>
@@ -140,24 +140,24 @@ We evaluate the models using three different metrics, R<sup>2</sup>, RMSE, and t
 <tbody>
 <tr>
 <td align="left">R<sup>2</sup></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">-2.534</td>
+<td align="left">0.936</td>
+<td align="left">0.965</td>
+<td align="left">0.916/td>
 </tr>
 <tr>
 <td align="left">RMSE</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">3217.263</td>
+<td align="left">1506.199</td>
+<td align="left">784.980</td>
+<td align="left">1308.188</td>
 </tr>
 <tr>
 <td align="left">Classification</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">1.0</td>
+<td align="left">0.991</td>
+<td align="left">0.864</td>
+<td align="left">0.863</td>
 </tr>
 </tbody>
 </table>
@@ -180,18 +180,18 @@ After testing each model on each dataset, we found the following models scored t
 <tbody>
 <tr>
 <td align="left">R<sup>2</sup></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Decision Tree on df_dropna_t9</td>
+<td align="left">0.946</td>
 </tr>
 <tr>
 <td align="left">RMSE</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Decision Tree on df_dropna_t9</td>
+<td align="left">1360.970</td>
 </tr>
 <tr>
 <td align="left">Classification</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Decision Tree on df_dropna_t9</td>
+<td align="left">0.994</td>
 </tr>
 </tbody>
 </table>
