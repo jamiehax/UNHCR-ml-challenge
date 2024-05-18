@@ -143,7 +143,7 @@ We evaluate the models using three different metrics, R<sup>2</sup>, RMSE, and t
 <td align="left">-2.534</td>
 <td align="left">0.936</td>
 <td align="left">0.965</td>
-<td align="left">0.916/td>
+<td align="left">0.916</td>
 </tr>
 <tr>
 <td align="left">RMSE</td>
