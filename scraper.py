@@ -7,7 +7,7 @@ import pandas as pd
 
 class FSNAUScraper():
     """
-    Web Scraper class for FAO FSNAU Early Warning/Early Action in Somalia dashboard.
+    Web Scraper class for the FSNAU Early Warning/Early Action in Somalia dashboard.
 
     Initialize:
         - `start_year`: the year to start scraping data from.

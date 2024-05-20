@@ -4,7 +4,7 @@ import pandas as pd
 
 class Aggregator:
     """
-    Combine separate CSV files into one aggregated DataFrame using the specified join method.
+    Combine separate CSV files into one aggregated DataFrame using the specified join method. Defaults to outer.
     """
 
     def __init__(self, join_method='outer') -> None:
